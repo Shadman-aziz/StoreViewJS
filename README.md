@@ -1,6 +1,6 @@
 # js-library-azizshad
 
-Link to Landing-Page/Examples page :  https://gentle-sierra-89361.herokuapp.com/
+Link to Landing-Page/Examples page :  https://hidden-taiga-34432.herokuapp.com/
 
 Copy of "Getting Started" section from Documentation page: 
 
@@ -31,4 +31,4 @@ this is how you add a card object to your collection object:
 ```  
   The rest of the detailed documentation about what each of the parameters mean is in API page, linked below:
 
-Link to Documentation/API page: https://gentle-sierra-89361.herokuapp.com/api_list.html
+Link to Documentation/API page: https://hidden-taiga-34432.herokuapp.com/api_list.html
