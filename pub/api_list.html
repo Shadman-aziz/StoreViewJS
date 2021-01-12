@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="card-make.css">
+    <title></title>
+  </head>
+  <body>
+
+    <div class="header center heading">
+  <a  class="title"><h1 class="center heading">StoreViewJS</h1></a>
+  <p class="center">This library allows you to make store front for any marketplace</p>
+  <div class="routes">
+    <a  href="index.html">Home</a>
+    <a class="active" href="api_list.html">API</a>
+  </div>
+ </div>
+
+
+<h1 class="apiText apiHeading">API-list</h1>
+
+<h2 class="apiText" >Getting Started (setup)</h2>
+<h3 class="apiText">make sure to include the following lines in the header of your HTML file</h3>
+<pre> <code class="setup">
+  &ltlink rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  &ltlink rel="stylesheet" href="card-make.css">
+  &ltscript src="dom_load.js"> &lt/script>
+  &ltscript defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> &lt/script>
+  &ltscript defer type="text/javascript" src='javascript-library.js'> &lt/script>
+</code> </pre>
+
+<h3 class="apiText"> this is how you declare a StoreViewJS card collection </h3>
+<pre> <code>
+  const collection = new CardCollection()
+</code> </pre>
+
+<h3 class="apiText"> this is how you make a card collection object</h3>
+<pre> <code>
+  collection.makeCollection(classToAdd,withCartFunctionality,clickToEnlarge,wishListFunctionality)
+</code> </pre>
+
+<h3 class="apiText"> this is how you add a card object to your collection object</h3>
+<pre> <code>
+  collection.makeCard(name,imgFolder,numOfPics,title,content,variableValue,price,description)
+</code> </pre>
+
+<hr class="divider" />
+
+  <h2 class="apiText">Options</h2>
+  <h4 class="apiText"> all the options available for each Collection object </h4>
+
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>Default</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>classToAdd (required) </td>
+        <td>/</td>
+        <td>String</td>
+        <td> you pass the class attribute given to the HTML element (preferably a div element)
+          that you want the card collection to be added to
+          (please make sure that this class attribute is unique).
+        For example, if the div element that you want to add to has the unique class
+      attribute "FirstContainer" then you will pass in ".FirstContainer" as the value for this parameter</td>
+      </tr>
+      <tr>
+        <td>withCartFunctionality</td>
+        <td>False</td>
+        <td>String</td>
+        <td> you declare whether you want the "add to cart"
+        functionality for your card collection, meaning the feature where if
+      you hover over the card you get the "add to cart" option. If you want to enable it
+    pass "True" for this parameter</td>
+     </tr>
+     <tr>
+    <td>clickToEnlarge</td>
+   <td>False</td>
+  <td>String</td>
+  <td> you declare whether you want the "click To enlarge"
+  functionality for your card collection, meaning the feature where if
+you click the image in the card you get the pop-up window with the extended description and the
+option to click between pictures of the catalog of the product. If you want to enable it
+pass "True" for this parameter</td>
+ </tr>
+ <tr>
+<td>wishListFunctionality</td>
+<td>False</td>
+<td>String</td>
+<td> you declare whether you want the "wish list"
+functionality for your card collection, meaning there will be a small "heart" sign
+in middle of cards of this collection which if you click the card gets added to the wishlist
+for the particular collection.If you want to enable it
+pass "True" for this parameter</td>
+</tr>
+ </tbody></table>
+  </div>
+
+  <h4 class="apiText">all the options available for each Card object</h4>
+
+  <div class="container">
+    <table class="apiText">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>name</td>
+        <td>String</td>
+        <td> name you want to give the product in this particular card</td></tr>
+      <tr>
+        <td>imgFolder</td>
+        <td>String (path to folder of images)</td>
+        <td> for this card, going to be animating when
+          user is hovering over particular card. Example : "images/shoe3_pics/"
+        (please make sure to follow this naming syntax for all the
+        pictures in the folder "nameOfCard"+numberStartingFrom1+".jpeg" example:
+        if card name is Greece the names of the pictues will be Greece1.jpeg,Greece2.jpeg etc)
+      </td>
+     </tr>
+     <tr>
+      <td>numOfPics</td>
+      <td>integer</td>
+      <td> the number of pictures the imgFolder has or how many pics you want to be used for the on-hover animation
+      for the card. If you dont want hover animation please enter 1. Make sure not to enter a number
+    larger than the number of files in the imgFolder</td>
+    </tr>
+    <tr>
+     <td>title</td>
+     <td>String</td>
+     <td> the title you want to be shown in the card for the item/product</td>
+   </tr>
+   <tr>
+    <td>content</td>
+    <td>String</td>
+    <td> the short description you want to be shown in the card for the item/product</td>
+  </tr>
+   <tr>
+    <td>variableValue</td>
+    <td>integer</td>
+    <td> the number of likes the item/product has </td>
+  </tr>
+  <tr>
+   <td>price</td>
+   <td>integer or float</td>
+   <td> the price that will show up in the card for the item/product</td>
+ </tr>
+ <tr>
+  <td>description</td>
+  <td>String</td>
+  <td>the long description you want to be shown for the item/product in the pop-up window
+     when the image is clicked ("clickToEnlarge" property of the particular collection needs to be enabled for this)</td>
+</tr>
+    </tbody></table>
+    </div>
+
+
+<hr class="divider" />
+
+<h2 class="apiText">Functions</h2>
+
+<div class="container ">
+  <h4>Functions available for each card collection</h4>
+  <pre> <code class="methods"><span class="comment"> //make collection of cards</span>
+const collection = new CardCollection()
+collection.makeCollection("classToAdd","withCartFunctionality","clickToEnlarge","wishListFunctionality")
+
+<span class="comment">//add card to collection</span>
+ collection.makeCard("name","imgFolder",numOfPics,"title","content",variableValue,price,"description")
+
+<span class="comment">//sort by price</span>
+ collection.sortByPrice()
+
+<span class="comment">//how to switch cards</span>
+ collection.switchPosition(positionOfCardToSwitch1,positionOfCardToSwitch2)
+
+<span class="comment">//how to show liked cards</span>
+  collection.showLiked()
+
+<span class="comment">//how to edit title for a particular card</span>
+  collection.editTitle(numberOfTheCardToEdit,newPrice)
+
+<span class="comment">//how to edit price for a particular card</span>
+  collection.editPrice(numberOfTheCardToEdit,newPrice)
+
+<span class="comment">//how to edit content for a particular card</span>
+
+  collection.editContent(numberOfTheCardToEdit,newPrice)
+
+<span class="comment">//how to highlight card</span>
+  collection.highlightCard(numberOfTheCardToHighlight)
+
+<span class="comment">//how to remove highlight from card</span>
+  collection.removeHighlightCard(numberOfTheCardToRemoveHighlight)
+
+<span class="comment">//how to show cart, when submit is pressed inside cart a JSON object with customer information is returned</span>
+  collection.checkoutCart()
+
+<span class="comment">//how to show wishlist</span>
+  collection.showWishList()
+
+<span class="comment">//how to delete particular card</span>
+  collection.deleteCard(numberOfTheCardToDelete)
+   </code> </pre>
+  </div>
+
+
+  <p class="apiText" >We hope you enjoy using our library. For questions please contact
+  the developer of this Library: Shadman Aziz</p>
+
+  </body>
+</html>

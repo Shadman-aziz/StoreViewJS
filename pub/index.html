@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="card-make.css">
+    <script src="dom_load.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer type="text/javascript" src='javascript-library.js'></script>
+    <script defer type="text/javascript" src='examples.js'></script>
+
+
+  </head>
+  <body>
+    <div class="header center heading">
+  <a  class="title"><h1 class="center heading">StoreViewJS</h1></a>
+  <p class="center">This library allows you to make store front for any marketplace</p>
+  <div class="routes">
+    <a class="active" href="index.html">Home</a>
+    <a href="api_list.html">API</a>
+  </div>
+</div>
+<pre> <code> <span class="comment"> //make collection of cards </span>
+  const collection = new CardCollection()
+  collection.makeCollection('.FirstOne',"False","False","True") </code> </pre>
+  <div class="FirstOne">
+
+  </div>
+  <p class="center">you can add new items and they will be perfectly aligned in a grid format</p>
+  <p class="center">(check documentation for what parameters you need to provide to make your very own card)</p>
+  <button onclick="collection.makeCard('Spain','images/spain_pics/',3,'Spain Trip Package', 'Welcome to the holiday of a lifetime',40,2500,'incredible scenes and food in Spain, treat yourself to an incredible atmosphere for Soccer and parties, this is one trip never to Forget')" type="button" class="alphaButton" name="button"> Click To Make a new Card</button>
+  <pre> <code> <span class="comment"> //add card to collection </span>
+    collection.makeCard('Spain','images/spain_pics/',3,'Spain Trip Package',
+    'Welcome to the holiday of a lifetime',40,2500,'incredible scenes and food in Spain,
+    treat yourself to an incredible atmosphere for Soccer and parties, this is one trip never to Forget')
+   </code> </pre>
+  <br>
+
+  <hr class="divider" />
+
+  <div class="SecondOne">
+
+  </div>
+  <p class="center">you can enable "click to enlarge" functionality as well </p>
+  <p class="center">These cards are enlargeable, click their Image to enlarge them (if you hover over the card long enough you can see animation of the different angles of the product as well) </p>
+
+  <pre> <code>
+    <span  class="comment">//make collection of cards that can be enlarged </span>
+      const collection2 = new CardCollection()
+      collection2.makeCollection('.SecondOne',"False","True")
+   </code> </pre>
+
+  <hr class="divider" />
+
+  <div class="ThirdOne">
+
+  </div>
+  <p class="center">you can enable "add To cart" functionality as well </p>
+  <p class="center">If you hover over these cards you will see the cart option pop up</p>
+  <p class="center">Later I will show you the option to go to cart</p>
+  <pre> <code>
+    <span class="comment">//make collection of cards that have "add to cart" feature </span>
+        const collection3 = new CardCollection()
+        collection3.makeCollection('.ThirdOne',"True","True")
+   </code> </pre>
+
+  <hr class="divider" />
+
+  <div class="FourthOne">
+
+  </div>
+  <p class="center">you can also sort the items by price, in ascending order or descending order </p>
+  <p class="center">Click the buttons and see for yourself</p>
+  <button class="alphaButton" onclick="collection4.sortByPrice()" type="button" name="button"> Sort by ascending</button>
+  <button class="alphaButton" onclick="collection4.sortByPrice('descending')" type="button" name="button"> Sort by descending</button>
+  <pre> <code>
+    <span class="comment">//how to sort by price </span>
+        collection4.sortByPrice()
+      <span class="comment">  // or </span>
+        collection4.sortByPrice('descending')
+   </code> </pre>
+  <hr class="divider" />
+
+  <div class="FifthOne">
+
+  </div>
+  <p class="center">you can also switch the ordering of the cards </p>
+  <p class="center">press the button below to switch the first and third card:</p>
+
+  <button class="alphaButton" onclick="collection5.switchPosition(0,2)" type="button" name="button"> Switch</button>
+  <pre> <code>
+    <span class="comment">//how to switch cards </span>
+        collection5.switchPosition(0,2)
+   </code> </pre>
+  <hr class="divider" />
+
+
+    <div class="SeventhOne">
+
+    </div>
+    <p class="center">you can also only view the ones the customer liked, press the like button of the items you like </p>
+    <p class="center">and then press the 'View Liked' button:</p>
+
+    <button class="alphaButton" onclick="collection7.showLiked()" type="button" name="button"> View Liked</button>
+
+    <pre> <code>
+    <span class="comment">  //how to show liked cards </span>
+          collection7.showLiked()
+     </code> </pre>
+
+    <hr class="divider" />
+
+    <div class="SixthOne">
+
+  </div>
+  <p class="center">Once you have created an item card, you can still edit the content </p>
+  <p class="center">enter the new title, new text and new price of any of the above cards(number starts at 0) (please fill in all of them and do not leave them blank)</p>
+   <input id="cardNum" class="alphaInput" type="text" name="" placeholder="card Number" value="">
+   <input id="newTitle" class="alphaInput" type="text" name="" placeholder="new Title" value="">
+   <input id="newText" class="alphaInput" type="text" name="" placeholder="new Text" value="">
+   <input id="newPrice" class="alphaInput" type="text" name="" placeholder="new Price" value="">
+  <button class="alphaButton" onclick="collection6.editTitle(document.getElementById('cardNum').value,document.getElementById('newTitle').value);collection6.editPrice(document.getElementById('cardNum').value,document.getElementById('newPrice').value);collection6.editContent(document.getElementById('cardNum').value,document.getElementById('newText').value);" type="button" name="button"> edit</button>
+  <pre> <code>
+    <span class="comment"> //how to edit a particular card </span>
+    collection6.editTitle(document.getElementById('cardNum').value,document.getElementById('newTitle').value)
+    collection6.editPrice(document.getElementById('cardNum').value,document.getElementById('newPrice').value)
+    collection6.editContent(document.getElementById('cardNum').value,document.getElementById('newText').value)
+   </code> </pre>
+  <hr class="divider" />
+
+  <div class="TenthOne">
+
+</div>
+<p class="center">Once you have created an item card, you can highlight it to get the customers attention (ex: ongoing sale/promotion)</p>
+<p class="center"> you can highlight multiple items at a time,a maybe promote a certain sale</p>
+
+<div class="center">
+  <button  onclick="collection10.highlightCard(0);" type="button" name="button"> Highlight card 1</button>
+  <button  onclick="collection10.highlightCard(1);" type="button" name="button"> Highlight card 2</button>
+  <button  onclick="collection10.highlightCard(2);" type="button" name="button"> Highlight card 3</button>
+  <button  onclick="collection10.highlightCard(3);" type="button" name="button"> Highlight card 4</button>
+
+</div>
+
+<div class="center">
+  <button  onclick="collection10.removeHighlightCard(0);" type="button" name="button"> remove Highlight card 1</button>
+  <button  onclick="collection10.removeHighlightCard(1);" type="button" name="button"> remove Highlight card 2</button>
+  <button  onclick="collection10.removeHighlightCard(2);" type="button" name="button"> remove Highlight card 3</button>
+  <button  onclick="collection10.removeHighlightCard(3);" type="button" name="button"> remove Highlight card 4</button>
+
+</div>
+
+<pre> <code>
+  <span class="comment"> //how to highlight card </span>
+      collection10.highlightCard(0)
+
+  <span class="comment"> //how to remove highlight from card </span>
+      collection10.removeHighlightCard(0)
+ </code> </pre>
+
+
+
+  <hr class="divider" />
+
+  <div class="cart EigthOne">
+
+  </div>
+  <p class="center">Click any of these items' cart option </p>
+  <p class="center">If you hover over these cards you will see the cart option pop up</p>
+  <p class="center">and then click the 'go to cart' button</p>
+  <p class="center">the submit button of the cart will print out a JSON object with the buyer information in the console for the developer to use</p>
+  <button class="alphaButton" onclick="collection8.checkoutCart()" type="button" name="button"> Go To Cart</button>
+  <pre> <code>
+    <span class="comment">//how to show cart </span>
+        collection8.checkoutCart()
+
+   </code> </pre>
+  <hr class="divider" />
+
+  <div class=" NinthOne">
+
+  </div>
+  <p class="center">Click any of these items' wishList option (the heart symbol) </p>
+  <p class="center">and then click the 'show wishList' button</p>
+  <p class="center">the exit button of the wishlist will repopulate the previous card grid</p>
+  <button class="alphaButton" onclick="collection9.showWishList()" type="button" name="button"> Show WishList</button>
+
+  <pre> <code>
+    <span class="comment">//how to show wishlist </span>
+        collection9.showWishList()
+   </code> </pre>
+
+  <hr class="divider" />
+
+  <div class=" EleventhOne">
+
+  </div>
+  <p class="center">You can also delete any card from the grid (example: when an item is out of stock) </p>
+
+  <div class="center">
+    <button  onclick="collection11.deleteCard(0);" type="button" name="button"> delete card 1</button>
+    <button  onclick="collection11.deleteCard(1);" type="button" name="button"> delete card 2</button>
+    <button  onclick="collection11.deleteCard(2);" type="button" name="button"> delete card 3</button>
+    </div> <pre> <code>
+      <span  class="comment">//how to delete particular card </span>
+          collection11.deleteCard(0)
+     </code> </pre>
+
+
+</html>

@@ -1,0 +1,73 @@
+"use strict";
+
+const collection = new CardCollection()
+collection.makeCollection('.FirstOne',"False","False","True")
+collection.makeCard('Italy','images/italy_pics/',2,'Italy Trip Package','Explore the Beauty of all of Italy',50,2250,"This trip is an all-expenses paid experience to see all the popular destinations of Italy, including Milan, Rome and Florence. Dont miss it")
+collection.makeCard('Greece','images/greece_pics/',2,'Greece Trip Package','Explore the Greek Isles',15,1999,'This experience of a lifetime is not to forget. All your friends and family will be jealous. This trip is an all expense paid 2 week vacation with guides')
+collection.makeCard('Italy','images/italy_pics/',2,'Italy Trip (Rome only)','Explore the Beauty of Rome',10,1250,"This trip is an all-expenses paid experience to see Rome and all the sights and sounds of its bustling culture and entertainment. Dont miss it")
+collection.makeCard('Greece','images/greece_pics/',2,'Greece Trip Package (Athens only)','Explore Athens',15,999,'This is the experience of a lifetime, Athens is very beautiful. All your friends and family will be jealous. This trip is an all expense paid 1 week trip')
+
+const collection2 = new CardCollection()
+collection2.makeCollection('.SecondOne',"False","True")
+collection2.makeCard('Shoe','images/shoe3_pics/',4,'Florsheim', 'Lodge Plain Leather Oxfords',5,340,'From the Lodge Collections. These dapper oxfords are crafted from soft leather. Best shoes as reviewed by GQ mens 2019')
+collection2.makeCard('Shoe','images/shoe_pics/',3,'TopMan Shoe','Spark Derby Shoes',10,250,"This classic derby style is an essential addition to your shoe collection. Faux suede upperRound toe Lace-up style Synthetic lining Synthetic sole Imported")
+collection2.makeCard('Shoe','images/shoe2_pics/',3,'Rockport Shoe','Dresssports Business Apron Toe Shoes',15,99,'The tailored mobility of the new DresSports Business 2 reflects the changing attitudes of the way we work today. Hand-finished')
+
+const collection4 = new CardCollection()
+collection4.makeCollection('.FourthOne',"False","True")
+collection4.makeCard('Spain','images/spain_pics/',3,'Spain Trip Package', 'Welcome to the holiday of a lifetime',40,2500,'incredible scenes and food in Spain, treat yourself to an incredible atmosphere for Soccer and parties, this is one trip never to Forget')
+collection4.makeCard('Italy','images/italy_pics/',2,'Italy Trip Package','Explore the Beauty of all of Italy',50,2250,"This trip is an all-expenses paid experience to see all the popular destinations of Italy, including Milan, Rome and Florence. Dont miss it")
+collection4.makeCard('Greece','images/greece_pics/',2,'Greece Trip Package','Explore the Greek Isles',15,1999,'This experience of a lifetime is not to forget. All your friends and family will be jealous. This trip is an all expense paid 2 week vacation with guides')
+collection4.makeCard('Italy','images/italy_pics/',2,'Italy Trip (Rome only)','Explore the Beauty of Rome',10,1250,"This trip is an all-expenses paid experience to see Rome and all the sights and sounds of its bustling culture and entertainment. Dont miss it")
+collection4.makeCard('Greece','images/greece_pics/',2,'Greece Trip Package (Athens only)','Explore Athens',15,999,'This is the experience of a lifetime, Athens is very beautiful. All your friends and family will be jealous. This trip is an all expense paid 1 week trip')
+
+const collection3 = new CardCollection()
+collection3.makeCollection('.ThirdOne',"True","True")
+collection3.makeCard('Shoe','images/shoe3_pics/',4,'Florsheim', 'Lodge Plain Leather Oxfords',5,340,'From the Lodge Collections. These dapper oxfords are crafted from soft leather. Best shoes as reviewed by GQ mens 2019')
+collection3.makeCard('Shoe','images/shoe_pics/',3,'TopMan Shoe','Spark Derby Shoes',10,250,"This classic derby style is an essential addition to your shoe collection. Faux suede upperRound toe Lace-up style Synthetic lining Synthetic sole Imported")
+collection3.makeCard('Shoe','images/shoe2_pics/',3,'Rockport Shoe','Dresssports Business Apron Toe Shoes',15,99,'The tailored mobility of the new DresSports Business 2 reflects the changing attitudes of the way we work today. Hand-finished')
+
+const collection5 = new CardCollection()
+collection5.makeCollection('.FifthOne',"True","True")
+collection5.makeCard('Shoe','images/shoe3_pics/',4,'Florsheim', 'Lodge Plain Leather Oxfords',5,340,'From the Lodge Collections. These dapper oxfords are crafted from soft leather. Best shoes as reviewed by GQ mens 2019')
+collection5.makeCard('Shoe','images/shoe_pics/',3,'TopMan Shoe','Spark Derby Shoes',10,250,"This classic derby style is an essential addition to your shoe collection. Faux suede upperRound toe Lace-up style Synthetic lining Synthetic sole Imported")
+collection5.makeCard('Shoe','images/shoe2_pics/',3,'Rockport Shoe','Dresssports Business Apron Toe Shoes',15,99,'The tailored mobility of the new DresSports Business 2 reflects the changing attitudes of the way we work today. Hand-finished')
+
+const collection6 = new CardCollection()
+collection6.makeCollection('.SixthOne',"True","True")
+collection6.makeCard('Shoe','images/shoe3_pics/',4,'Florsheim', 'Lodge Plain Leather Oxfords',5,340,'From the Lodge Collections. These dapper oxfords are crafted from soft leather. Best shoes as reviewed by GQ mens 2019')
+collection6.makeCard('Shoe','images/shoe_pics/',3,'TopMan Shoe','Spark Derby Shoes',10,250,"This classic derby style is an essential addition to your shoe collection. Faux suede upperRound toe Lace-up style Synthetic lining Synthetic sole Imported")
+collection6.makeCard('Shoe','images/shoe2_pics/',3,'Rockport Shoe','Dresssports Business Apron Toe Shoes',15,99,'The tailored mobility of the new DresSports Business 2 reflects the changing attitudes of the way we work today. Hand-finished')
+
+const collection10 = new CardCollection()
+collection10.makeCollection('.TenthOne',"False","True","False")
+collection10.makeCard('Italy','images/italy_pics/',2,'Italy Trip Package','Explore the Beauty of all of Italy',50,2250,"This trip is an all-expenses paid experience to see all the popular destinations of Italy, including Milan, Rome and Florence. Dont miss it")
+collection10.makeCard('Greece','images/greece_pics/',2,'Greece Trip Package','Explore the Greek Isles',15,1999,'This experience of a lifetime is not to forget. All your friends and family will be jealous. This trip is an all expense paid 2 week vacation with guides')
+collection10.makeCard('Italy','images/italy_pics/',2,'Italy Trip (Rome only)','Explore the Beauty of Rome',10,1250,"This trip is an all-expenses paid experience to see Rome and all the sights and sounds of its bustling culture and entertainment. Dont miss it")
+collection10.makeCard('Greece','images/greece_pics/',2,'Greece Trip Package (Athens only)','Explore Athens',15,999,'This is the experience of a lifetime, Athens is very beautiful. All your friends and family will be jealous. This trip is an all expense paid 1 week trip')
+
+
+const collection7 = new CardCollection()
+collection7.makeCollection('.SeventhOne',"True","True")
+collection7.makeCard('Shoe','images/shoe3_pics/',4,'Florsheim', 'Lodge Plain Leather Oxfords',5,340,'From the Lodge Collections. These dapper oxfords are crafted from soft leather. Best shoes as reviewed by GQ mens 2019')
+collection7.makeCard('Shoe','images/shoe_pics/',3,'TopMan Shoe','Spark Derby Shoes',10,250,"This classic derby style is an essential addition to your shoe collection. Faux suede upperRound toe Lace-up style Synthetic lining Synthetic sole Imported")
+collection7.makeCard('Shoe','images/shoe2_pics/',3,'Rockport Shoe','Dresssports Business Apron Toe Shoes',15,99,'The tailored mobility of the new DresSports Business 2 reflects the changing attitudes of the way we work today. Hand-finished')
+
+const collection8 = new CardCollection()
+collection8.makeCollection('.EigthOne',"True","True")
+collection8.makeCard('Shoe','images/shoe3_pics/',4,'Florsheim', 'Lodge Plain Leather Oxfords',5,340,'From the Lodge Collections. These dapper oxfords are crafted from soft leather. Best shoes as reviewed by GQ mens 2019')
+collection8.makeCard('Shoe','images/shoe_pics/',3,'TopMan Shoe','Spark Derby Shoes',10,250,"This classic derby style is an essential addition to your shoe collection. Faux suede upperRound toe Lace-up style Synthetic lining Synthetic sole Imported")
+collection8.makeCard('Shoe','images/shoe2_pics/',3,'Rockport Shoe','Dresssports Business Apron Toe Shoes',15,99,'The tailored mobility of the new DresSports Business 2 reflects the changing attitudes of the way we work today. Hand-finished')
+
+const collection9 = new CardCollection()
+collection9.makeCollection('.NinthOne',"False","True","True")
+collection9.makeCard('Italy','images/italy_pics/',2,'Italy Trip Package','Explore the Beauty of all of Italy',50,2250,"This trip is an all-expenses paid experience to see all the popular destinations of Italy, including Milan, Rome and Florence. Dont miss it")
+collection9.makeCard('Greece','images/greece_pics/',2,'Greece Trip Package','Explore the Greek Isles',15,1999,'This experience of a lifetime is not to forget. All your friends and family will be jealous. This trip is an all expense paid 2 week vacation with guides')
+collection9.makeCard('Italy','images/italy_pics/',2,'Italy Trip (Rome only)','Explore the Beauty of Rome',10,1250,"This trip is an all-expenses paid experience to see Rome and all the sights and sounds of its bustling culture and entertainment. Dont miss it")
+collection9.makeCard('Greece','images/greece_pics/',2,'Greece Trip Package (Athens only)','Explore Athens',15,999,'This is the experience of a lifetime, Athens is very beautiful. All your friends and family will be jealous. This trip is an all expense paid 1 week trip')
+
+const collection11 = new CardCollection()
+collection11.makeCollection('.EleventhOne',"True","True")
+collection11.makeCard('Shoe','images/shoe3_pics/',4,'Florsheim', 'Lodge Plain Leather Oxfords',5,340,'From the Lodge Collections. These dapper oxfords are crafted from soft leather. Best shoes as reviewed by GQ mens 2019')
+collection11.makeCard('Shoe','images/shoe_pics/',3,'TopMan Shoe','Spark Derby Shoes',10,250,"This classic derby style is an essential addition to your shoe collection. Faux suede upperRound toe Lace-up style Synthetic lining Synthetic sole Imported")
+collection11.makeCard('Shoe','images/shoe2_pics/',3,'Rockport Shoe','Dresssports Business Apron Toe Shoes',15,99,'The tailored mobility of the new DresSports Business 2 reflects the changing attitudes of the way we work today. Hand-finished')
